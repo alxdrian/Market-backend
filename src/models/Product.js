@@ -1,10 +1,10 @@
-const db = require("./config/database");
+const db = require("../config/database");
 
 class Product {
   constructor() {}
 
   static findAll() {
-    let sql = "SELECT * FROM products";
+    let sql = "SELECT * FROM product";
     return db.execute(sql);
   }
 }
