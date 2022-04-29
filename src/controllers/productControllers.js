@@ -10,3 +10,13 @@ exports.getAllProducts = async (req, res, next) => {
     next(error);
   }
 }
+
+exports.getProductById = async (req, res, next) => {
+  try {
+    let [product, _] = await Product.findById(req.params.id);
+    res.status(200).json({product: product[0]});
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+}
