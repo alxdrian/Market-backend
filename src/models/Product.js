@@ -8,3 +8,5 @@ class Product {
     return db.execute(sql);
   }
 }
+
+module.exports = Product;

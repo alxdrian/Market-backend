@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.route('/').get((req, res) => {
-  res.send('Productos');
-});
+// Route GET /api/products
+router.route('/').get(productControllers.getAllProducts);
 
 module.exports = router;
