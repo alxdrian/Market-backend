@@ -14,6 +14,7 @@ app.use(cors());
 
 // Routes
 app.use("/api/products", require("./routes/productRoutes"));
+app.use("/api/categories", require("./routes/categoryRoutes"));
 
 // Error Handler
 app.use((err, req, res, next) => {
