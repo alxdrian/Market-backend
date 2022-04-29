@@ -27,7 +27,9 @@ exports.getProductsByFilters = async (req, res, next) => {
       req.query.name, 
       req.query.category,
       req.query.pricemin,
-      req.query.pricemax
+      req.query.pricemax,
+      req.query.discountmin,
+      req.query.discountmax
     );
     res.status(200).json({products});
   } catch (error) {
