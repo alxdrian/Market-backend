@@ -23,7 +23,12 @@ exports.getProductById = async (req, res, next) => {
 
 exports.getProductsByFilters = async (req, res, next) => {
   try {
-    let [products, _] = await Product.findByFilters(req.query.name, req.query.category);
+    let [products, _] = await Product.findByFilters(
+      req.query.name, 
+      req.query.category,
+      req.query.pricemin,
+      req.query.pricemax
+    );
     res.status(200).json({products});
   } catch (error) {
     console.log(error);

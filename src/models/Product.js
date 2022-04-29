@@ -13,7 +13,7 @@ class Product {
     return db.execute(sql, [id]);
   }
 
-  static findByFilters(name, category) {
+  static findByFilters(name, category, pricemin, pricemax) {
     let sql = "SELECT * FROM product WHERE 1=1";
     let queries = [];
     if (name) {
@@ -23,6 +23,15 @@ class Product {
     if (category) {
       sql += ` AND category LIKE ?`;
       queries.push(`%${category}%`);
+    }
+    console.log(pricemin);
+    if (pricemin) {
+      sql += ` AND price >= ?`;
+      queries.push(pricemin);
+    }
+    if (pricemax) {
+      sql += ` AND price <= ?`;
+      queries.push(pricemax);
     }
     return db.execute(sql, queries);
   }
