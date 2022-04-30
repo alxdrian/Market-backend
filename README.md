@@ -20,7 +20,7 @@ To run in local, cloned this repository and create an env.file with the next var
 - DB_USER=your database user
 - DB_PASSWORD=your database password
 
-Remember create after an mysql database with the next tables:
+Remember create before an mysql database with the next tables:
 - Product {
   id: int
   name: varchar
