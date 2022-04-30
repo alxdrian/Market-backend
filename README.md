@@ -113,7 +113,7 @@ Obtain an object with a key "categories" and a array of all the categories as va
 
 ```shell
 
-GET https://market-backend-alxdrian.vercel.app/api/products
+GET https://market-backend-alxdrian.vercel.app/api/categories
 
 {  
   "categories" : [
