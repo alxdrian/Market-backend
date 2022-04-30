@@ -13,7 +13,14 @@ class Product {
     return db.execute(sql, [id]);
   }
 
-  static findByFilters(name, category, pricemin, pricemax, discountmin, discountmax) {
+  static findByFilters(
+    name, 
+    category, 
+    pricemin, 
+    pricemax, 
+    discountmin, 
+    discountmax
+  ) {
     let sql = "SELECT * FROM product WHERE 1=1";
     let queries = [];
     if (name) {
